@@ -1,11 +1,8 @@
 [project]
-name = "job-match-agent"
+name = "job_match_agent"
 version = "0.1.0"
-description = "Add your description here"
+description = "Agentic AI tool that ranks Platsbanken job ads against a CV"
 readme = "README.md"
-authors = [
-    { email = "caobo875@gmail.com" }
-]
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28.1",
@@ -16,13 +13,6 @@ dependencies = [
     "python-dotenv>=1.2.4",
 ]
 
-[project.scripts]
-job-match-agent = "job_match_agent:main"
-
-[build-system]
-requires = ["uv_build>=0.12.21,<0.13.0"]
-build-backend = "uv_build"
-
 [dependency-groups]
 dev = [
     "pytest>=9.1.1",
@@ -30,6 +20,9 @@ dev = [
     "responses>=0.26.3",
     "ruff>=0.16.10",
 ]
+
+[tool.uv]
+package = false
 
 [tool.ruff]
 line-length = 100
