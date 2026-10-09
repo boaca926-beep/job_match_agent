@@ -1,0 +1,36 @@
+[project]
+name = "job-match-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { email = "caobo875@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain-openai>=1.7.0",
+    "langgraph>=1.2.14",
+    "pydantic>=2.14.0",
+    "pypdf>=6.19.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+job-match-agent = "job_match_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "responses>=0.26.3",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
